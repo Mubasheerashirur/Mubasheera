@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+</head>
+<body background= "banner.png">
+    <h1><bold>Beautiful and simple website using HTML</bold></h1>
+   <p style="color: rgb(229, 228, 231);"><marquee>Welcome to our Website.We are delighted to see you as a part of our community.Feel free to discover,interact,and collaborate with us to create something wonderful."</marquee></p><br>
+    
+    <a href="http://wikipedia.org">Wikipedia</a>
+
+   <bold><u><h3>Steps to create wikipedia page</h3></u></bold>
+    <ol>
+        <li>Understand Wikipedia's Notability Guidelines.</li>
+        <li>Gather Reliable Sources.</li>
+        <li>Create a Wikipedia Account.</li>
+        <li>Conduct Preparatory Research.</li>
+        <li>Start with a Draft.</li>
+        <li>Write the Article.</li>
+        <li>Format and Style.</li>
+        <li>Add Reliable Citations.</li>
+    </ol>
+    <ul>
+        <li>Understand Wikipedia's Notability Guidelines.</li>
+        <li>Gather Reliable Sources.</li>
+        <li>Create a Wikipedia Account.</li>
+        <li>Conduct Preparatory Research.</li>
+        <li>Start with a Draft.</li>
+        <li>Write the Article.</li>
+        <li>Format and Style.</li>
+        <li>Add Reliable Citations.</li>
+    </ul>
+<img src="./wiki.jpeg" alt="wiki">
+
+<h2>HTML form</h2>
+<form>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname"><br>
+
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname"><br>
+
+          <label for="email">email address:</label><br>
+          <input type="text" id="email" name="email"><br>
+
+      
+          <label for="psw">Password:</label><br>
+          <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number,one uppercase,lowercase letter, and at least 8 or more characters" required><br>
+        
+          <label for="cnfm psw">confirm password:</label><br>
+          <input type="text" id="cnfm psw" name="cnfm psw"><br>
+        
+          <label for="dob">Date of birth:</label><br>
+          <input type="text" id="dob" name="dob"><br>
+
+        <legend>Choose your Gender:</legend> 
+        <label for="Male">Male:</label>
+        <input type="radio" name="Gender" id="Male" value="Male" radio>
+        <label for="Female">Female:</label>
+        <input type="radio" name="Gender" id="Female" value="Female" radio><br>
+     
+        <label for="cntry">Country:</label><br>
+        <input type="text" id="cntry" name="cntry"><br><br>
+        <input type="submit" value="Submit">  
+</form>
+ 
+
+
+<!------multiple choice questions---->
+    <p>Which one of the following metals do not react with cold as well as hot water?</p>
+	<label for="fe">Fe:</label>
+    <input type="radio" name="do not react with cold as well as hot water" id="fe" value="fe" radiobutton>
+    <label for="mg">Mg:</label>
+    <input type="radio" name="do not react with cold as well as hot water" id="mg" value="mg" radiobutton><br>
+    <label for="fe">Na:</label>
+    <input type="radio" name="do not react with cold as well as hot water" id="Na" value="Na" radiobutton>
+    <label for="fe">Ca:</label>
+    <input type="radio" name="do not react with cold as well as hot water" id="Ca" value="Ca" radiobutton><br>
+
+
+   <!----Checkboxes for selecting multiple options--> 
+   <input type="checkbox" id="vehicle1" name="vehicle1" value="Car">
+   <label for="vehicle1"> I have Audi</label><br>
+   <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+   <label for="vehicl2"> I have Fortuner</label><br>
+   <input type="checkbox" id="vehicle3" name="vehicle3" value="Car">
+   <label for="vehicle3"> I have Rolls Royce</label><br>
+
+
+<!-----Text input fields for short answers---->
+<form><p>Enter the link below:</p>
+      <textarea id="afnain" name="afnain" rows="1" cols="60"></textarea>
+</form>
+
+
+<!----Textarea for longer responses---->
+        <form><p>Please enter some text below:</p>
+        <textarea id="afnain" name="afnain" rows="4" cols="60"></textarea>
+        </form><br>
+
+
+        <!-----Rating scales ---->
+        <label for="rating">Rate your experience:</label><br>
+        <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+
+        <!----Dropdown menus for selecting options---->
+        <label for="bike">Choose a bike:</label> 
+    <select name="bike" id="bike"> 
+        <option value="apache">Apache</option> 
+        <option value="Ns pulsar">NS Pulsar</option> 
+        <option value="yamaha YZF">Yamaha YZF</option> 
+        <option value="r15">R15</option> 
+    </select>
+
+  
+<!----colspan---->
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  </style>
+    <table style="width: 30%;">
+      <h2>HTML TABLE-Colspan</h2>
+      <tr>
+        <th colspan="1">Name</th>
+        <th>Age</th>
+        <th>Date of birth</th>
+        <th>City</th>
+      </tr>
+          <tr>
+           <td>Afnain Shirur</td>
+           <td>21</td>
+           <td>20-08-2002</td>
+           <td>Hubli</td>
+           </tr>
+           <tr>
+            <td>Anabiya Shirur</td>
+            <td>17</td>
+            <td>24-11-2006</td>
+            <td>Banglore</td>
+           </tr>
+           <tr>
+            <td>Ashfan Shirur</td>
+            <td>14</td>
+            <td>20-02-2008</td>
+            <td>Mumbai</td>
+           </tr>
+    </table><br>
+
+
+
+    <!----rowspan---->
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      </style>
+      <table style="width:30%">
+        <h2>HTML TABLE-Rowspan</h2>
+        <tr>
+          <th>Name</th>
+          <td>Affu</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Phone</th>
+          <td>7097848543</td>
+        </tr>
+        <tr>
+          <td>8973632412</td>
+        </tr>
+      </table>
+    
+</body>
+</html>
