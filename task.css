@@ -1,0 +1,63 @@
+h1{
+    text-align: center;
+    color: rgb(26, 24, 24);
+    
+}
+
+/* element selector*/
+p{
+    font-size: 20px;
+    color: rgb(38, 36, 39);
+}
+
+/* id selector*/
+#bike{
+    text-align: center;
+    color: purple;
+}
+
+/* class selector*/
+.address{
+    text-align: left;
+    font-style: italic;
+}
+
+/* universal selector*/
+*{
+    color: black;
+    text-align:left;
+    font-family: Georgia;
+}
+
+/* grouping selector*/
+ h2,h3{
+    color: ghostwhite;
+}
+/* unvisisted link */
+a:link{
+    color: black;
+}
+/* visited link */
+a:visited{
+    color:blueviolet;
+}
+
+/* mouse over link */
+a:hover{
+    color: rgb(23, 23, 109);
+}
+
+/* selected link */
+a:active{
+    color:aqua;
+}
+
+/*pseudo-element selectors*/
+p::first-line{
+    color: navy;
+    font-variant:small-caps;
+}
+h2,h3::first-letter{
+    color: rgb(36, 14, 56);
+}
+
