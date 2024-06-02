@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Reverse String Function</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="handleReverseString()">Reverse</button>
+    <script> 
+
+        // Define the reverseString function
+      function reverseString(str) {
+    // Use JavaScript's built-in string manipulation methods to reverse the string
+    return str.split('').reverse().join('');
+}
+
+// Function to handle button click event
+function handleReverseString() {
+    // Get the input string from the text box
+    const inputString = document.getElementById('inputString').value;
+    // Reverse the string using reverseString function
+    const reversedString = reverseString(inputString);
+    // Display the reversed string in the output paragraph
+    document.getElementById('output').textContent = `Reversed String: ${reversedString}`;
+}
+
+// Test the function with different input strings to ensure it works correctly
+console.log(reverseString("hello"));  
+console.log(reverseString("JavaScript")); 
+console.log(reverseString("12345")); 
+console.log(reverseString("racecar"));
+console.log(reverseString("")); 
+
+    </script>
+</body>
+</html>
