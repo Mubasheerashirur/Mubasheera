@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call Example</title>
+    <script>
+        const apiURL = 'https://jsonplaceholder.typicode.com/todos/1';
+
+        // Function to handle API response
+        const handleResponse = async (response, outputId) => {
+            try {
+                const data = await response.json();
+                document.getElementById(outputId).textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById(outputId).textContent = 'Fetch error: ' + error;
+            }
+        };
+
+        // Function to call API using Promises
+        function callApiWithPromises() {
+            fetch(apiURL)
+                .then(response => response.ok ? handleResponse(response, 'outputPromises') : Promise.reject(response.statusText))
+                .catch(error => document.getElementById('outputPromises').textContent = 'Fetch error: ' + error);
+        }
+
+        // Function to call API using Async/Await
+        async function callApiWithAsyncAwait() {
+            try {
+                const response = await fetch(apiURL);
+                if (response.ok) {
+                    await handleResponse(response, 'outputAsyncAwait');
+                } else {
+                    throw new Error(response.statusText);
+                }
+            } catch (error) {
+                document.getElementById('outputAsyncAwait').textContent = 'Fetch error: ' + error;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>API Call Example</h1>
+
+    <h2>Using Promises</h2>
+    <button onclick="callApiWithPromises()">Call API with Promises</button>
+    <pre id="outputPromises"></pre>
+
+    <h2>Using Async/Await</h2>
+    <button onclick="callApiWithAsyncAwait()">Call API with Async/Await</button>
+    <pre id="outputAsyncAwait"></pre>
+</body>
+</html>
