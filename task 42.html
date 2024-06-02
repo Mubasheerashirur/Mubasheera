@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Function</title>
+    <script>
+        // Define the calculate function
+        function calculate(num1, num2, operation, callback) {
+            let result;
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    result = num2 !== 0 ? num1 / num2 : 'Error: Division by zero';
+                    break;
+                default:
+                    result = 'Error: Invalid operation';
+            }
+            // Call the callback function with the result
+            callback(result);
+        }
+
+        // Function to handle button click event
+        function handleCalculate() {
+            // Get the input values
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.getElementById('operation').value;
+            
+            // Callback function to display the result
+            function displayResult(result) {
+                document.getElementById('output').textContent = `Result: ${result}`;
+            }
+
+            // Call the calculate function with inputs and callback
+            calculate(num1, num2, operation, displayResult);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculate Function</h1>
+    <label for="num1">Enter number 1:</label>
+    <input type="number" id="num1" step="any">
+    <br><br>
+    <label for="num2">Enter number 2:</label>
+    <input type="number" id="num2" step="any">
+    <br><br>
+    <label for="operation">Choose operation:</label>
+    <select id="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+    </select>
+    <br><br>
+    <button onclick="handleCalculate()">Calculate</button>
+    <p id="output"></p>
+</body>
+</html>
